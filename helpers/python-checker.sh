@@ -1,7 +1,7 @@
 source ./helpers/utils.sh
 STARTUP_FILE=$(shell_startup_file)
 
-WANTED_PYTHON_VERSION=3.9.4
+WANTED_PYTHON_VERSION=3.12.0
 
 source $STARTUP_FILE > /dev/null 2>&1
 source ./helpers/colors.sh

@@ -1,8 +1,8 @@
 source ./helpers/utils.sh
 source $(shell_startup_file) > /dev/null 2>&1
 source ./helpers/colors.sh
-LEGACY_NODE_VERSION=14
-LTS_NODE_VERSION=16
+LEGACY_NODE_VERSION=18
+LTS_NODE_VERSION=20
 
 NODE=$(which node)
 NODE_IS_FROM_NVM=$(echo $NODE | grep -c "nvm")
@@ -14,7 +14,7 @@ NPM_VERSION=$($NPM --version)
 MOCHA=$(which mocha)
 MOCHA_VERSION=$($MOCHA --version)
 MOCHA_IS_FROM_NVM=$(echo $MOCHA | grep -c ".nvm")
-NVM_COMMAND="curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | bash"
+NVM_COMMAND="curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash"
 NVM_LINES="export NVM_DIR="$HOME/.nvm"\n[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm"
 NODE_ARCH=$($NODE ./helpers/node-arch-check.js)
 
